@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --primary-color: hsla(240, 6%, 21%, 1);
+    --button-bg-primary-color: hsla(240, 9%, 89%, 1);
+    --button-bg-selected-color: hsla(194, 97%, 31%, 1);
+    --button-icon-selected-color: hsla(0, 0%, 100%, 1);
+    --bg-color: #FFF;
+}
+
+
+body {
+    background: var(--bg-color);
+    min-height: 100vh;
+    font-size: 12.6rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10rem;
+    
+}
+
+.display-panel {
+    width: 32.1rem;
+}
+
+#timer {
+    width: 32rem;
+    height: 14.8rem;
+    font-weight: 500;
+    line-height: 14.8rem;
+    text-align: center;
+    display: flex;
+    gap: .5rem;
+    font-size: 12.6rem;
+}
+
+#controls {
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    padding: 0 .5rem;
+}
+
+#controls button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.templates {
+    width: 30.8rem;
+    height: 33.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+}
+
+.template-container {
+    width: 13.8rem;
+    height: 15.2rem;
+    border: none;
+    border-radius: 2.4rem;
+    background: var(--button-bg-primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.template-container.selected{
+    background: var(--button-bg-selected-color);
+    color: var(--button-icon-selected-color);
+
+}
+
+.template-container svg path {
+    fill: var(--primary-color);
+}
+
+.template-container svg path.selected {
+    fill: var(--button-icon-selected-color);
+}
+
+@media (min-width: 630px) {
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 82rem;
+        margin: 0 auto;
+        gap: 0;
+    }
+}
