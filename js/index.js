@@ -9,7 +9,7 @@ import {
 
 import Timer from "./timer.js"
 import Events from "./events.js";
-import {} from "./themes.js";
+import {  } from "./themes.js";
 
 import Sound from "./sounds.js"
 
@@ -21,3 +21,4 @@ const timer = Timer({
 })
 
 Events({timer, sound})
+
